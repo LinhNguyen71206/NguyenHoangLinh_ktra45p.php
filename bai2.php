@@ -72,7 +72,6 @@ function themDuLieuMauNeuBangDangTrong(PDO $ketNoi): void
 
 /**
  * Lấy toàn bộ danh sách học sinh từ database.
- *
  * @return array Mảng các mảng kết hợp thông tin học sinh
  */
 function layDanhSachHocSinh(PDO $ketNoi): array
@@ -96,7 +95,6 @@ function hienThiDanhSachHocSinh(array $danhSach): void
 
 /**
  * Tìm học sinh có điểm (grade) 
- *
  * @return array|null 
  */
 function timHocSinhDiemCaoNhat(PDO $ketNoi): ?array
@@ -118,12 +116,12 @@ themDuLieuMauNeuBangDangTrong($ketNoiDatabase);
 
 echo '<pre>';
 
-echo "=== DANH SÁCH TẤT CẢ HỌC SINH (TỪ DATABASE) ===" . PHP_EOL;
+echo " DANH SÁCH TẤT CẢ HỌC SINH " . PHP_EOL;
 $danhSachHocSinh = layDanhSachHocSinh($ketNoiDatabase);
 hienThiDanhSachHocSinh($danhSachHocSinh);
 echo PHP_EOL;
 
-echo "=== HỌC SINH CÓ ĐIỂM CAO NHẤT ===" . PHP_EOL;
+echo "HỌC SINH CÓ ĐIỂM CAO NHẤT" . PHP_EOL;
 $hocSinhGioiNhat = timHocSinhDiemCaoNhat($ketNoiDatabase);
 
 if ($hocSinhGioiNhat !== null) {
